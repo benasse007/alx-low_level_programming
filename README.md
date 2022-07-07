@@ -1,1 +1,1 @@
-this directory is reserved for day one project of c programming language
+this is my work for alx
