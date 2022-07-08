@@ -1,25 +1,37 @@
-#include "main.h"
-/**
- * print_square - prints a square
- * @size: is the size of the square
- */
-void print_square(int size)
-{
-	int row, column;
+#include <stdio.h>
 
-	if (size <= 0)
-	{
-		_putchar('\n');
-	}
-	else
-	{
-		for (row = 0; row < size; row++)
-		{
-			for (column = 0; column < size; column++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
-		}
-	}
+/**
+ * main - prints Fizz for int divisible by 3 and Buzz for 5
+ *
+ * Return: int
+ */
+
+int main(void)
+{
+int i;
+
+for (i = 1; i <= 100; i++)
+{
+if (i % 3 == 0 && i % 5 != 0)
+{
+printf("Fizz");
+}
+else if (i % 3 != 0 && i % 5 == 0)
+{
+printf("Buzz");
+}
+else if (i % 3 == 0 && i % 5 == 0)
+{
+printf("FizzBuzz");
+}
+else
+{
+printf("%d", i);
+}
+if (i != 100)
+putchar(' ');
+else
+putchar('\n');
+}
+return (0);
 }
